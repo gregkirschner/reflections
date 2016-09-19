@@ -5,3 +5,7 @@ When you initialize a repository, it sets up the metadata used by git (such as c
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 The staging area allows you to choose which files to commit. For example, you may want to commit one file at a time so you can comment on the file being added and logically separate it from other files being added. It is also useful because it allows for multiple files to be commited at once if that is what you need. If you make a change for a bug fix, for example, that affects multiple files, then you can add those files to the staging area and commit them all together. The staging area also allows you to remove files before a commit, so it gives you another chance to review before a commit occurs.
+
+How can you use the staging area to make sure you have one commit per logical change?
+
+You can use git add to only add the relevant files for any commit. If you'd made unrelated changes on another file, you do not have to add it to the staging area to make it part of your commit. It allows you to select specific files to go into the staging area at a time, then only commit those. You can do this logically by bug fix or new feature, for example, so each commit is specific to that logical change.
