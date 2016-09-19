@@ -13,3 +13,7 @@ You can use git add to only add the relevant files for any commit. If you'd made
 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
 
 Branches could be used when adding new experimental features or layouts. Maybe you want to try out a new idea, you could create a branch with that new idea/layout/feature and see how it works, while keeping a master branch that is functional. If that experimental branch does not work out, your master branch will stay neatly organized and you can always checkout the experimental branch to see it again. Branches allow for simultaneous versions of the repository to exist without having to worry about affecting one or the other. This allows you to experiment more or try new things with minimal worries to how you affect the production version of the code.
+
+How do the diagrams help you visualize the branch structure?
+
+The diagrams help you see where the parent commits are in relation to the newer commits. You can trace back from the "head" or the latest commit in any branch through its parents. It will also help you visualize detached head commits that are outside any current branch, so you can understand how those are not inline with the other branches.
