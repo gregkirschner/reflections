@@ -9,3 +9,7 @@ The staging area allows you to choose which files to commit. For example, you ma
 How can you use the staging area to make sure you have one commit per logical change?
 
 You can use git add to only add the relevant files for any commit. If you'd made unrelated changes on another file, you do not have to add it to the staging area to make it part of your commit. It allows you to select specific files to go into the staging area at a time, then only commit those. You can do this logically by bug fix or new feature, for example, so each commit is specific to that logical change.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Branches could be used when adding new experimental features or layouts. Maybe you want to try out a new idea, you could create a branch with that new idea/layout/feature and see how it works, while keeping a master branch that is functional. If that experimental branch does not work out, your master branch will stay neatly organized and you can always checkout the experimental branch to see it again. Branches allow for simultaneous versions of the repository to exist without having to worry about affecting one or the other. This allows you to experiment more or try new things with minimal worries to how you affect the production version of the code.
