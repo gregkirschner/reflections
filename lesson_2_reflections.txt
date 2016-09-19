@@ -1,3 +1,7 @@
 What happens when you initialize a repository? Why do you need to do it?
 
 When you initialize a repository, it sets up the metadata used by git (such as creating the .git hidden folder). It does not automatically do any commits, so after the git init, it will still be in an initial commit status without any actual commits. Once git has created its metadata, you will be able to work in the repository to make all of the actual git changes, such as git add (to add files) and git commit (to commit versions). If you do not initialize, the repository/folder will not have git metadata and will not respect any git commands.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+The staging area allows you to choose which files to commit. For example, you may want to commit one file at a time so you can comment on the file being added and logically separate it from other files being added. It is also useful because it allows for multiple files to be commited at once if that is what you need. If you make a change for a bug fix, for example, that affects multiple files, then you can add those files to the staging area and commit them all together. The staging area also allows you to remove files before a commit, so it gives you another chance to review before a commit occurs.
