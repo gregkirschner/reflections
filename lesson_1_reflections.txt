@@ -1,0 +1,40 @@
+On my Mac, I utilized diff -u to compare the two files.
+I found that it was very easy to see what had been removed from the first file
+(with the - lines) and what had been added to the new file (with the + lines).
+Rather than having to go through all of the code, it allowed me to simply review the
+code that changed. This saves a lot of time when you know a bug appeared in a new
+version of code, but not the previous. There is no need to go through the code that is
+exactly the same in both versions if the bug is only happening in one version.
+I think it also gets you thinking about the areas that edited, so if you know the bug
+is appearing in one area, you'll be able to quickly identify likely culprits by seeing
+the pieces of code that changed.
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+My efficiency would improve by only having to review relevant pieces of code when new bugs crop up. Without having an entire history of the file, I would have to read through all of the code to figure out where the error came from. But with the entire history available to me, I could compare the differences between the last working version and the new version with the bug. I could also learn how things evolved over time. By seeing how things changed, I could maybe implement new pieces of code with the lessons learned from previous mistakes/changes/evolutions.
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+By choosing when to commit, you make a commit happen at a logical time, such as after you fixed a bug, or added a new feature. You will not have a commit occur mid-work (i.e. you're in the middle of a line, or have half-implemented a new feature). You get to control the logic of your commits and with good comments to explain each commit, you'll be able to see what exactly happened during each commit.
+
+The cons would be that you do not have the automatic blanket of everything saved, like Google Docs. If you make a large amount of changes without making a commit, then realize there are issues, you might have to go to an earlier version than you want because there were no incremental commits to go back to.
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+Git allows saving multiple files with one commit because programming often involves multiple inter-related files, such as HTML, CSS, and Javascript for a website. Those files may refer to each other, so it is important that the versions stay consistent between each file.
+
+In other situations, files may not be inter-related to any other files, so a Google Docs-style of saving one file works better. For example, if you're working on a two papers for the same class, they do not need to be filed when one changes because they are completely independent from one another.
+
+How can you use the commands git log and git diff to view the history of files?
+
+Git log allows you to see a list of commits (newest first). Each commit has a comment that describes the nature of the changes. You can the author and date/time of each change. You can also do a git log --stat to see more details about how many lines were inserted/deleted and which files were changed. 
+
+Git diff allows you to see the specific differences (lines removed and added) between two commits. You need to enter the commit id of the two commits to compare them: git diff commitIdOne commitIdTwo.  By configuring git to show colors, you can also see the deletions easily in a red font and insertions in a green font.
+
+How might using version control make you more confident to make changes that could break something?
+
+When you know you have working versions that you can easily go back to with a git checkout, you can try new things. If the new ideas do not pan out, the git checkout can take you right back where you were with the working version without any issues (or without having to manually fix the code that you changed line by line). This takes away your fear of doing re-work and also the fear of completely breaking something that is working. You cannot break something completely when there are functional versions waiting to be restored.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+Git seems like it will be a useful way to keep my work organized. Before this first lesson, I felt confused by Git and why it needed to be used (I tended to save multiple files), but I now see its value. I am excited to start using it on new projects. I have a couple of Python scripts (playlist parsers for Apple Music xml files) that I will use it for, and I will use it as I start to work on the Full Stack Web Developers nanodegree program.
