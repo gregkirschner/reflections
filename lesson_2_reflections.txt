@@ -1,0 +1,3 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+When you initialize a repository, it sets up the metadata used by git (such as creating the .git hidden folder). It does not automatically do any commits, so after the git init, it will still be in an initial commit status without any actual commits. Once git has created its metadata, you will be able to work in the repository to make all of the actual git changes, such as git add (to add files) and git commit (to commit versions). If you do not initialize, the repository/folder will not have git metadata and will not respect any git commands.
