@@ -17,3 +17,7 @@ Branches could be used when adding new experimental features or layouts. Maybe y
 How do the diagrams help you visualize the branch structure?
 
 The diagrams help you see where the parent commits are in relation to the newer commits. You can trace back from the "head" or the latest commit in any branch through its parents. It will also help you visualize detached head commits that are outside any current branch, so you can understand how those are not inline with the other branches.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+It takes all of the new lines of coded added in the two branches and puts them together. It removes lines of code deleted by either branch. Once they are merged, the two separate lines on the diagram, come together into one commit and the parent of the merge is the last commit in both branches that were merged. Once the merge takes place, you can delete the old branch label because everything is now falling under the merged branch. The git log will show commits for both branches under the merged branch (ordered by timestamp). It is important to remember that when doing a git diff after a merge, that the commit directly below one commit is not necessarily its parent, so you can use git show <commit id> instead.
