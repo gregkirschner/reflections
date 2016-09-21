@@ -1,29 +1,71 @@
 What happens when you initialize a repository? Why do you need to do it?
 
-When you initialize a repository, it sets up the metadata used by git (such as creating the .git hidden folder). It does not automatically do any commits, so after the git init, it will still be in an initial commit status without any actual commits. Once git has created its metadata, you will be able to work in the repository to make all of the actual git changes, such as git add (to add files) and git commit (to commit versions). If you do not initialize, the repository/folder will not have git metadata and will not respect any git commands.
+When you initialize a repository, it sets up the metadata used by git (such as creating 
+the .git hidden folder). It does not automatically do any commits, so after the git init,
+ it will still be in an initial commit status without any actual commits. Once git has 
+ created its metadata, you will be able to work in the repository to make all of the
+ actual git changes, such as git add (to add files) and git commit (to commit versions).
+ If you do not initialize, the repository/folder will not have git metadata and will not
+ respect any git commands.
 
-How is the staging area different from the working directory and the repository? What value do you think it offers?
+How is the staging area different from the working directory and the repository? What
+value do you think it offers?
 
-The staging area allows you to choose which files to commit. For example, you may want to commit one file at a time so you can comment on the file being added and logically separate it from other files being added. It is also useful because it allows for multiple files to be commited at once if that is what you need. If you make a change for a bug fix, for example, that affects multiple files, then you can add those files to the staging area and commit them all together. The staging area also allows you to remove files before a commit, so it gives you another chance to review before a commit occurs.
+The staging area allows you to choose which files to commit. For example, you may want to
+commit one file at a time so you can comment on the file being added and logically
+separate it from other files being added. It is also useful because it allows for multiple
+files to be commited at once if that is what you need. If you make a change for a bug fix,
+for example, that affects multiple files, then you can add those files to the staging area
+and commit them all together. The staging area also allows you to remove files before a
+commit, so it gives you another chance to review before a commit occurs.
 
 How can you use the staging area to make sure you have one commit per logical change?
 
-You can use git add to only add the relevant files for any commit. If you'd made unrelated changes on another file, you do not have to add it to the staging area to make it part of your commit. It allows you to select specific files to go into the staging area at a time, then only commit those. You can do this logically by bug fix or new feature, for example, so each commit is specific to that logical change.
+You can use git add to only add the relevant files for any commit. If you'd made unrelated
+changes on another file, you do not have to add it to the staging area to make it part of
+your commit. It allows you to select specific files to go into the staging area at a time,
+then only commit those. You can do this logically by bug fix or new feature, for example,
+so each commit is specific to that logical change.
 
-What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+What are some situations when branches would be helpful in keeping your history organized?
+How would branches help?
 
-Branches could be used when adding new experimental features or layouts. Maybe you want to try out a new idea, you could create a branch with that new idea/layout/feature and see how it works, while keeping a master branch that is functional. If that experimental branch does not work out, your master branch will stay neatly organized and you can always checkout the experimental branch to see it again. Branches allow for simultaneous versions of the repository to exist without having to worry about affecting one or the other. This allows you to experiment more or try new things with minimal worries to how you affect the production version of the code.
+Branches could be used when adding new experimental features or layouts. Maybe you want to
+try out a new idea, you could create a branch with that new idea/layout/feature and see
+how it works, while keeping a master branch that is functional. If that experimental
+branch does not work out, your master branch will stay neatly organized and you can always
+checkout the experimental branch to see it again. Branches allow for simultaneous versions
+of the repository to exist without having to worry about affecting one or the other. This
+allows you to experiment more or try new things with minimal worries to how you affect the
+production version of the code.
 
 How do the diagrams help you visualize the branch structure?
 
-The diagrams help you see where the parent commits are in relation to the newer commits. You can trace back from the "head" or the latest commit in any branch through its parents. It will also help you visualize detached head commits that are outside any current branch, so you can understand how those are not inline with the other branches.
+The diagrams help you see where the parent commits are in relation to the newer commits.
+You can trace back from the "head" or the latest commit in any branch through its parents.
+It will also help you visualize detached head commits that are outside any current branch,
+so you can understand how those are not inline with the other branches.
 
-What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+What is the result of merging two branches together? Why do we represent it in the diagram
+the way we do?
 
-It takes all of the new lines of coded added in the two branches and puts them together. It removes lines of code deleted by either branch. Once they are merged, the two separate lines on the diagram, come together into one commit and the parent of the merge is the last commit in both branches that were merged. Once the merge takes place, you can delete the old branch label because everything is now falling under the merged branch. The git log will show commits for both branches under the merged branch (ordered by timestamp). It is important to remember that when doing a git diff after a merge, that the commit directly below one commit is not necessarily its parent, so you can use git show <commit id> instead.
+It takes all of the new lines of coded added in the two branches and puts them together.
+It removes lines of code deleted by either branch. Once they are merged, the two separate
+lines on the diagram, come together into one commit and the parent of the merge is the
+last commit in both branches that were merged. Once the merge takes place, you can delete
+the old branch label because everything is now falling under the merged branch. The git
+log will show commits for both branches under the merged branch (ordered by timestamp). It
+is important to remember that when doing a git diff after a merge, that the commit
+directly below one commit is not necessarily its parent, so you can use git show <commit i
+> instead.
 
 What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
 
-Automatic merging can save a good amount of time for merging pieces of code that are not conflicting. For example, if new functions were added or content was deleted, git can make an automatic decision on those without requiring extra work by the user. 
+Automatic merging can save a good amount of time for merging pieces of code that are not
+conflicting. For example, if new functions were added or content was deleted, git can make
+an automatic decision on those without requiring extra work by the user. 
 
-The manual merges require work and thought from the user, and possibly discussion with other people who may have worked on the code, but they ensure that conflicting code is handled in a logical manner that the user gets a chance to review, rather than simply automatically assuming what the user may want. 
+The manual merges require work and thought from the user, and possibly discussion with
+other people who may have worked on the code, but they ensure that conflicting code is
+handled in a logical manner that the user gets a chance to review, rather than simply
+automatically assuming what the user may want. 
