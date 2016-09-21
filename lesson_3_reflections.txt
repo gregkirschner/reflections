@@ -5,3 +5,8 @@ update it. They can either start their own branch or make contributions that the
 choose to accept. Remote repositories also may be useful if you're working on multiple computers. You can push your 
 latest code to the repository, then later when working on another computer, pull it from the repository onto that 
 computer.
+
+Why might you want to always pull changes manually rather than having Git automatically
+stay up-to-date with your remote repository?
+
+If you are working on two different computers, there may be a situation where you don't want something that you did on one computer to automatically update your current computer. If other people are collaborating with you and they update a branch on the remote, you would not want their changes to automatically update yours either because you may have been working on something that you did not want updated.
