@@ -1,7 +1,0 @@
-When would you want to use a remote repository rather than keeping all your work local?
-
-Remote repositories are useful for collaboration because they allow multiple people to access the same code set and
-update it. They can either start their own branch or make contributions that the original creator of the project can
-choose to accept. Remote repositories also may be useful if you're working on multiple computers. You can push your 
-latest code to the repository, then later when working on another computer, pull it from the repository onto that 
-computer.
