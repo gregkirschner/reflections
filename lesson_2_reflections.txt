@@ -21,3 +21,9 @@ The diagrams help you see where the parent commits are in relation to the newer 
 What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 
 It takes all of the new lines of coded added in the two branches and puts them together. It removes lines of code deleted by either branch. Once they are merged, the two separate lines on the diagram, come together into one commit and the parent of the merge is the last commit in both branches that were merged. Once the merge takes place, you can delete the old branch label because everything is now falling under the merged branch. The git log will show commits for both branches under the merged branch (ordered by timestamp). It is important to remember that when doing a git diff after a merge, that the commit directly below one commit is not necessarily its parent, so you can use git show <commit id> instead.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Automatic merging can save a good amount of time for merging pieces of code that are not conflicting. For example, if new functions were added or content was deleted, git can make an automatic decision on those without requiring extra work by the user. 
+
+The manual merges require work and thought from the user, and possibly discussion with other people who may have worked on the code, but they ensure that conflicting code is handled in a logical manner that the user gets a chance to review, rather than simply automatically assuming what the user may want. 
