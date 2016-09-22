@@ -9,4 +9,24 @@ computer.
 Why might you want to always pull changes manually rather than having Git automatically
 stay up-to-date with your remote repository?
 
-If you are working on two different computers, there may be a situation where you don't want something that you did on one computer to automatically update your current computer. If other people are collaborating with you and they update a branch on the remote, you would not want their changes to automatically update yours either because you may have been working on something that you did not want updated.
+If you are working on two different computers, there may be a situation where you don't
+want something that you did on one computer to automatically update your current computer. 
+If other people are collaborating with you and they update a branch on the remote, you 
+would not want their changes to automatically update yours either because you may have 
+been working on something that you did not want updated.
+
+Describe the differences between forks, clones, and branches. When would you use one 
+instead of another?
+
+Forks allow you to copy (clone) a repository from GitHub into a new repository under your
+account. This is useful if you do not want to edit someone else's existing repository, but
+you want to use it, or if you do not have permission to edit their repository. Commits you make to your forked repository will not update the original repository.
+
+Clones are a copy of a repository. You can use clone to take a repository from GitHub and 
+copy it into your local Git. Commits you make to a clone can update the remote and local, 
+as long as you use push/pull commands to keep the remote and local in synch.
+
+Branches are a way to divide your code into different areas that allow you to do different
+things within the same repository. For example, you could have a "master" branch for your
+production code, an "experimental" branch for new ideas you are trying in the code, and a 
+"different language" branch if you are translating it. Branches can be merged if needed. Branches are a part of repositories, so if you clone or fork, you'll get the branches from the original repository.
