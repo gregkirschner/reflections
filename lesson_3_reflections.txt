@@ -29,4 +29,16 @@ as long as you use push/pull commands to keep the remote and local in synch.
 Branches are a way to divide your code into different areas that allow you to do different
 things within the same repository. For example, you could have a "master" branch for your
 production code, an "experimental" branch for new ideas you are trying in the code, and a 
-"different language" branch if you are translating it. Branches can be merged if needed. Branches are a part of repositories, so if you clone or fork, you'll get the branches from the original repository.
+"different language" branch if you are translating it. Branches can be merged if needed. 
+Branches are a part of repositories, so if you clone or fork, you'll get the branches from 
+the original repository.
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+
+By having the last known state of the remote stored locally, you can get a clear picture 
+of what changes you've made on your computer since you last pushed/pulled from the remote. 
+It may tell you that you are x commits ahead of the remote. You can then do a git diff 
+between the remote and local copy to see what changes you made. This allows you to review 
+before you push anything back to the remote. You can also merge your local branch with the 
+remote branch once you are ready (with a git fetch) and then merge them. At that point, 
+you'll be able to see that the remote and local are in synch.
