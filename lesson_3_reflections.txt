@@ -57,3 +57,19 @@ work involved). The only thing that I think would be easier is that you would no
 understand Git or GitHub and all of its commands. If I am working with someone who is not
 on GitHub, it would be more difficult to get them on there and fill them in on how to use 
 it.
+
+When would you want to make changes in a separate branch rather than directly in master? 
+What benefits does each approach have?
+
+When you are collaborating with others, it is useful to be able to save your changes in a 
+separate branch to introduce a new concept that you are working on (feature / bug fix, etc.
+) and that you want others to review and agree that it should be added to the master 
+branch that you are all working on together. This allows the master branch to get 
+thoroughly vetted before changes make their way into it, so master should be functional 
+and not have any unexpected changes for anyone. If you introduced a change into master 
+without doing a pull, you may suprise someone else who was working on something in master 
+that is affected by your work.
+
+If you are working on your own or on a smaller project, it may be okay to save changes
+right into master due to the convenience of it. If you are making a small bug fix that 
+everyone is aware of, you may also be able to get it into master if you're on a small team and everyone knows it is coming and they are not working on inter-related code.
