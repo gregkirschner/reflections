@@ -42,3 +42,18 @@ between the remote and local copy to see what changes you made. This allows you 
 before you push anything back to the remote. You can also merge your local branch with the 
 remote branch once you are ready (with a git fetch) and then merge them. At that point, 
 you'll be able to see that the remote and local are in synch.
+
+How would you collaborate without using Git or GitHub? What would be easier, and what 
+would be harder?
+
+Without Git or GitHub, I would save multiple copies of my files. When I made changes, I 
+would update the filename (maybe with a date-time stamp or version number at the end). I 
+would then send my latest file in an email to someone. At the same time, I may have to 
+send the original file so that they could compare (if necessary), or in my email explain 
+the changes and pull out some relevant pieces of code they should focus on. This would be
+more difficult to easily keep track of which file we are both on as far as the latest code.
+It also would be more difficult to highlight changes and comment on changes (more manual 
+work involved). The only thing that I think would be easier is that you would not have to 
+understand Git or GitHub and all of its commands. If I am working with someone who is not
+on GitHub, it would be more difficult to get them on there and fill them in on how to use 
+it.
