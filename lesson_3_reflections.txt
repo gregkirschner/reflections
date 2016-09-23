@@ -61,3 +61,5 @@ it.
 Making an edit on Windows.
 
 Windows edit #2.
+
+Testing Sublime as default commit editor on Windows 7 - 64 Bit.
