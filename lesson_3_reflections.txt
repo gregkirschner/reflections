@@ -59,3 +59,5 @@ on GitHub, it would be more difficult to get them on there and fill them in on h
 it.
 
 Making an edit on Windows.
+
+Windows edit #2.
