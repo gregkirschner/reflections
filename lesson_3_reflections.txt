@@ -57,3 +57,5 @@ work involved). The only thing that I think would be easier is that you would no
 understand Git or GitHub and all of its commands. If I am working with someone who is not
 on GitHub, it would be more difficult to get them on there and fill them in on how to use 
 it.
+
+Making an edit on Windows.
